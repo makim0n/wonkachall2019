@@ -23,7 +23,16 @@ More detail: ['Step2'](./step2.md)
 3. bf les user -> trouver test
 4. https://willywonka.shop/reset?debug=1 -> un jwt + backend.willywonka.shop dans la stacktrace
 5. dirsearch sur le backend -> on trouve encore un /reset -> /reset?debug=1 -> set cookie : backend-session=jwt vide
-5. bf avec rockyou le secret du jwt qu'on récup dans la stacktrace -> s3cr3t
+6. bf avec rockyou le secret du jwt qu'on récup dans la stacktrace -> s3cr3t
+7. refaire un jwt sur jwt.io avec un compte validateur (genre aas) et une expiration lointaine -> https://backend.willywonka.shop/reset/jwt_craft 
+8. faire la meme que etape 4 mais avec le user aas pour se co avec
+9. chercher le ticket "deadbeef" et flag
+
+> 7ED33F3EB8E49C5E4BE6B8E2AE270E4018582B27E030D32DE4111DB585EE0318
+
+## Step 3
+
+More detail: ['Step3'](./step3.md)
 
 ## Resources
 

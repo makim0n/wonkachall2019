@@ -1,0 +1,6 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+debug:
+    path: /?debug=1
+    controller: #TODO#

@@ -1,0 +1,6 @@
+tree 9b4d0d3483dbe669531218114dc1df7d22f1ec0b
+parent 8cda59381a6755d33425cb4ccddcc011a85649c6
+author Nicolas Cosnard <nicolas@cosnard.io> 1560432710 +0200
+committer Nicolas Cosnard <nicolas@cosnard.io> 1560432710 +0200
+
+Added debug mode with "debug=1" GET param

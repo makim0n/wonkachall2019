@@ -194,3 +194,25 @@ Testing 14344380 passwords...
 [+] s3cr3t is the CORRECT key!
 ```
 
+## Craft new jwt
+
+> https://www.jsonwebtoken.io/
+
+* existing 
+
+> eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0IiwiYXVkIjoiZnJvbnRlbmQud2lsbHl3b25rYS5zaG9wIiwiaWF0IjoxNTYyNjY0MzE1LCJleHAiOjE1NjI2NjQ5MTV9.UW7ZBlYilpv6g5oI-ryrnq1l00kfurcTbaG2FtSEU-o
+
+```json
+{
+ "typ": "JWT",
+ "alg": "HS256"
+}
+{
+ "sub": "test",
+ "aud": "frontend.willywonka.shop",
+ "iat": 1562664315,
+ "exp": 1562664915
+}
+```
+
+> clé secrète : s3cr3t

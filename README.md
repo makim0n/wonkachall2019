@@ -6,15 +6,17 @@
 
 ## Step 1
 
+More detail: ['Step1'](./step1.md)
+
 1. dirsearch -> .git
 2. GitTools -> dumper -> extractor
 3. Flag 1 dans .git/COMMIT_EDITMSG
 
 > 16ECD0DF90036C3CA8D6E988BB1737DC332CD72A8F4E62C32E0F825EDD155009
 
-More detail: ['Step1'](./step1.md)
-
 ## Step 2
+
+More detail: ['Step2'](./step2.md)
 
 1. trouver le debug=1 dans le .git
 2. aller sur la page /reset
@@ -29,6 +31,7 @@ More detail: ['Step1'](./step1.md)
 2. Seclist, username shortlist : https://raw.githubusercontent.com/danielmiessler/SecLists/master/Usernames/top-usernames-shortlist.txt
 3. jwt checker : https://jwt.io/
 4. jwt_tool : https://github.com/ticarpi/jwt_tool
+5. jwt encoder / decoder : https://www.jsonwebtoken.io/
 
 ---
 

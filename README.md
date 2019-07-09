@@ -34,6 +34,8 @@ More detail: ['Step2'](./step2.md)
 
 More detail: ['Step3'](./step3.md)
 
+1. réussir à trig la xxe via svg : (rect.svg)[./step3/rect.svg]
+
 ## Resources
 
 1. GitTools : https://github.com/internetwache/GitTools.git
@@ -41,6 +43,8 @@ More detail: ['Step3'](./step3.md)
 3. jwt checker : https://jwt.io/
 4. jwt_tool : https://github.com/ticarpi/jwt_tool
 5. jwt encoder / decoder : https://www.jsonwebtoken.io/
+6. lfi and ssrf via xxe : https://hackerone.com/reports/347139
+7. xxe oob : https://www.acunetix.com/blog/articles/band-xml-external-entity-oob-xxe/
 
 ---
 

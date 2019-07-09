@@ -34,7 +34,13 @@ More detail: ['Step2'](./step2.md)
 
 More detail: ['Step3'](./step3.md)
 
-1. réussir à trig la xxe via svg : (rect.svg)[./step3/rect.svg]
+1. réussir à trig la xxe via svg : [rest.svg](./step3/rect.svg)
+2. upload [ro.svg](./step3/ro.svg) à l'adresse : http://willywonka.shop/profile?filetype=image%2fsvg%2bxml ==> XXE OOB
+3. mettre `aas` en nom de victime et du garbage pour le reste
+4. copier coller l'id du ticket dans le backend -> les logs du python server commencent à bouger
+5. cliquer sur autoresize
+
+> 0D7D2DDEA2B25FF0D35D3E173BA2CDCB120D3554E124EBE2B147B79CF0007630
 
 ## Resources
 

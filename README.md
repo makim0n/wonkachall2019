@@ -72,6 +72,17 @@ More detail: [Step5](./step5.md)
 
 More detail: [Step6](./step6.md)
 
+1. upload procdump.exe sur la machine
+2. récupérer le minidump de lsass.exe
+3. récupérer les creds avec mimikatz en local
+4. trouver le mot de passe en claire de adminserv
+
+> 87950cf8267662a3b26460b38a07f0e2f203539676f4a88a7c572a596140ade4
+
+## Step 7 
+
+
+
 ## Resources
 
 1. GitTools : https://github.com/internetwache/GitTools.git
@@ -85,6 +96,7 @@ More detail: [Step6](./step6.md)
 9. exploitation s3 via ssrf : https://www.notsosecure.com/exploiting-ssrf-in-aws-elastic-beanstalk/
 10. exploitation host-manager tomcat : https://www.certilience.fr/2019/03/variante-d-exploitation-dun-tomcat-host-manager/
 11. extract sam security : https://www.securusglobal.com/community/2013/12/20/dumping-windows-credentials/
+12. extract minidump + creds : https://cyberarms.wordpress.com/2015/03/16/grabbing-passwords-from-memory-using-procdump-and-mimikatz/
 
 ---
 

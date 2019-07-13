@@ -42,7 +42,8 @@ More detail: [Step3](./step3.md)
 
 > 0D7D2DDEA2B25FF0D35D3E173BA2CDCB120D3554E124EBE2B147B79CF0007630
 
-## Step 4
+
+## Step 4
 
 More detail: [Step4](./step4.md)
 
@@ -81,11 +82,17 @@ More detail: [Step6](./step6.md)
 
 ## Step 7 
 
+More detail: [Step7](./step7.md)
+
 1. lister les shares accessibles avec les shares -> trouver le shares "Users" sur 172.16.42.5
 2. le monter en local
 3. aller récupérer des identifiants et un flag
 
 > 5FFECA75938FA8E5D7FCB436451DA1BC4713DCD94DD6F57F2DF50E035039AB0C
+
+## Step 8
+
+More detail: [Step8](./step8.md)
 
 ## Resources
 

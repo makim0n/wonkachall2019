@@ -94,6 +94,16 @@ More detail: [Step7](./step7.md)
 
 More detail: [Step8](./step8.md)
 
+1. relier une vm windows qu'on connait à l'ad
+2. faire un bloodhound
+3. remarquer que c'est du resources based constrained delegation
+4. ajouter une machine avec un spn controlé
+5. modifier la valeur de msDS-AllowedToActOnBehalfOfOtherIdentity
+6. impersonate administrator sur le dc grâce à rubeus (s4u)
+7. psexec avec le user impersonate
+8. récupérer le ntds.dit (vssadmin)
+9. récupérer le hash de krbtgt
+
 ## Resources
 
 1. GitTools : https://github.com/internetwache/GitTools.git
@@ -109,6 +119,9 @@ More detail: [Step8](./step8.md)
 11. extract sam security : https://www.securusglobal.com/community/2013/12/20/dumping-windows-credentials/
 12. extract minidump + creds : https://cyberarms.wordpress.com/2015/03/16/grabbing-passwords-from-memory-using-procdump-and-mimikatz/
 13. red team creds dumping : https://ired.team/offensive-security/credential-access-and-credential-dumping
+14. resources based constrained delegation attacke by pixis : https://beta.hackndo.com/resource-based-constrained-delegation-attack/
+15. rbcd attack par harmj0y : https://www.harmj0y.net/blog/activedirectory/a-case-study-in-wagging-the-dog-computer-takeover/
+16. exploitation détaillé de rbcd : https://shenaniganslabs.io/2019/01/28/Wagging-the-Dog.html
 
 ---
 

@@ -104,6 +104,8 @@ More detail: [Step8](./step8.md)
 8. récupérer le ntds.dit (vssadmin)
 9. récupérer le hash de krbtgt
 
+> 24704ab2469b186e531e8864ae51c9497227f4a77f0bb383955c158101ab50c5
+
 ## Resources
 
 1. GitTools : https://github.com/internetwache/GitTools.git

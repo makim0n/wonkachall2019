@@ -145,7 +145,7 @@ Discovered open port 445/tcp on 172.16.42.101
 Discovered open port 5040/tcp on 172.16.42.101                                 
 Discovered open port 49669/tcp on 172.16.42.101                  
 
-sudo nmap -sT -sV -O -T4 -vvv --version-intensity=8 -sC -p135,49712,554,5040,49669 172.16.42.101
+sudo nmap -sT -sV -O -T4 -vvv --version-intensity=8 -sC -p135,49712,445,5040,49669 172.16.42.101
 
 PORT      STATE    SERVICE REASON      VERSION
 135/tcp   open     msrpc   syn-ack     Microsoft Windows RPC

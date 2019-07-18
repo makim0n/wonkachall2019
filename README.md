@@ -106,6 +106,17 @@ More detail: [Step8](./step8.md)
 
 > 24704ab2469b186e531e8864ae51c9497227f4a77f0bb383955c158101ab50c5
 
+## Step 9
+
+More detail: [Step9](./step9.md)
+
+1. créer un golden ticket
+2. tenter psexec avec, sinon faire du pth avec adminWorkstation
+3. voir que la machine utilise winscp
+4. récupérer le hash réversible de veruca dans la clé de registre
+5. récupérer le password
+6. se connecter via winscp avec les creds
+
 ## Resources
 
 1. GitTools : https://github.com/internetwache/GitTools.git
@@ -124,6 +135,10 @@ More detail: [Step8](./step8.md)
 14. resources based constrained delegation attacke by pixis : https://beta.hackndo.com/resource-based-constrained-delegation-attack/
 15. rbcd attack par harmj0y : https://www.harmj0y.net/blog/activedirectory/a-case-study-in-wagging-the-dog-computer-takeover/
 16. exploitation détaillé de rbcd : https://shenaniganslabs.io/2019/01/28/Wagging-the-Dog.html
+17. relaying kerberos - hacing fun with constained delegation : https://dirkjanm.io/krbrelayx-unconstrained-delegation-abuse-toolkit/
+18. Récup le ntds : https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md
+19. où sont cachés les creds winscp : https://superuser.com/questions/100503/where-does-winscp-store-sites-password
+20. outil pour décoder le password : https://github.com/anoopengineer/winscppasswd/releases
 
 ---
 

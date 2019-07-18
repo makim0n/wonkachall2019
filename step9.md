@@ -116,3 +116,19 @@ L�F� Ӭ��C)�0ĞD)�q�i�а/{P�O� �:i�+00�/C:\�1�NӭP
 ```
 
 > C:\Program Files (x86)\WinSCP\WinSCP.exe
+
+## add route to connect to srv01
+
+```bash
+sudo ip route add 172.16.69.0/24 via 10.8.0.25 dev tun0
+```
+
+* connection as veruca
+
+```bash
+ssh veruca@172.16.69.78
+```
+
+## Flag
+
+> 83907d64b336c599b35132458f7697c4eb0de26635b9616ddafb8c53d5486ac2

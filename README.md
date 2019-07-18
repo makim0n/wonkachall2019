@@ -116,6 +116,10 @@ More detail: [Step9](./step9.md)
 4. récupérer le hash réversible de veruca dans la clé de registre
 5. récupérer le password
 6. se connecter via winscp avec les creds
+7. ajouter une route vers la machine de veruca
+8. s'y connecter en ssh
+
+> 83907d64b336c599b35132458f7697c4eb0de26635b9616ddafb8c53d5486ac2
 
 ## Resources
 

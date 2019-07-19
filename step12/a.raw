@@ -1,49 +1,3 @@
-# Step 12
-
-## basic enum
-
-dans le linenum fait précédemment on a un binaire suid et sgid :
-
-```bash
-[...]
-[-] SUID files:
--rwsr-xr-x 1 root root 10232 mars  28  2017 /usr/lib/eject/dmcrypt-get-device
--rwsr-xr-x 1 root root 440728 mars   1 17:19 /usr/lib/openssh/ssh-keysign
--rwsr-xr-- 1 root messagebus 42992 juin   9 23:42 /usr/lib/dbus-1.0/dbus-daemon-launch-helper
--rwsr-xr-x 1 root root 59680 mai   17  2017 /usr/bin/passwd
--rwsr-xr-x 1 root root 50040 mai   17  2017 /usr/bin/chfn
--rwsr-xr-x 1 root root 75792 mai   17  2017 /usr/bin/gpasswd
--rwsr-xr-x 1 root root 40504 mai   17  2017 /usr/bin/chsh
--rwsr-xr-x 1 root root 40312 mai   17  2017 /usr/bin/newgrp
--rwsr-xr-x 1 root root 1019656 mai   28 22:13 /usr/sbin/exim4
--rwsr-xr-x 1 root root 40536 mai   17  2017 /bin/su
--rwsr-xr-x 1 root root 44304 mars   7  2018 /bin/mount
--rwsr-xr-x 1 root root 31720 mars   7  2018 /bin/umount
--rwsr-xr-x 1 root root 61240 nov.  10  2016 /bin/ping
--rwsr-s---+ 1 root root 14392 juil.  8 11:03 /opt/exportVIP
--rwsr-xr-x 1 root root 110760 mars  20  2017 /sbin/mount.nfs
-
-
-[-] SGID files:
--rwxr-sr-x 1 root mail 19008 janv. 17  2017 /usr/bin/dotlockfile
--rwxr-sr-x 1 root ssh 358624 mars   1 17:19 /usr/bin/ssh-agent
--rwxr-sr-x 1 root crontab 40264 oct.   7  2017 /usr/bin/crontab
--rwxr-sr-x 1 root tty 27448 mars   7  2018 /usr/bin/wall
--rwxr-sr-x 1 root shadow 71856 mai   17  2017 /usr/bin/chage
--rwxr-sr-x 1 root shadow 22808 mai   17  2017 /usr/bin/expiry
--rwxr-sr-x 1 root tty 14768 avril 12  2017 /usr/bin/bsd-write
--rwxr-sr-x 1 root mail 10952 déc.  25  2016 /usr/bin/dotlock.mailutils
--rwsr-s---+ 1 root root 14392 juil.  8 11:03 /opt/exportVIP
--rwxr-sr-x 1 root shadow 35592 mai   27  2017 /sbin/unix_chkpwd
-[...]
-```
-
-## binary extraction
-
-le binaire est tout petit donc niveau extract c'est assez primaire, à coup de base64
-
-```bash
-georgina@SRV02-BACKUP:/dev/shm$ cat /opt/exportVIP | base64
 f0VMRgIBAQAAAAAAAAAAAAIAPgABAAAAsBBAAAAAAABAAAAAAAAAAHgxAAAAAAAAAAAAAEAAOAAL
 AEAAGwAaAAYAAAAEAAAAQAAAAAAAAABAAEAAAAAAAEAAQAAAAAAAaAIAAAAAAABoAgAAAAAAAAgA
 AAAAAAAAAwAAAAQAAACoAgAAAAAAAKgCQAAAAAAAqAJAAAAAAAAcAAAAAAAAABwAAAAAAAAAAQAA
@@ -297,9 +251,4 @@ AAAAAAAAAOUAAAAIAAAAAwAAAAAAAABoQEAAAAAAAGgwAAAAAAAACAAAAAAAAAAAAAAAAAAAAAEA
 AAAAAAAAAAAAAAAAAADqAAAAAQAAADAAAAAAAAAAAAAAAAAAAABoMAAAAAAAABwAAAAAAAAAAAAA
 AAAAAAABAAAAAAAAAAEAAAAAAAAAAQAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAhDAAAAAAAADzAAAA
 AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==
-georgina@SRV02-BACKUP:/dev/shm$ md5sum /opt/exportVIP 
-34a0d54db4eaa349046645c5e6d80756  /opt/exportVIP
-```
-
-## find the vuln
 

@@ -148,7 +148,27 @@ More detail: [Step11](./step11.md)
 
 More detail: [Step12](./step12.md)
 
+1. trouver le binaire avec linEnum
+2. trouver l'overflow (pwntool cyclic -> 296)
+3. regarder la plt du binaire et les protections, voir que c'est un ret2plt
+4. récup un gadget pop rdi; ret dans le binaire
+5. faire le ret2plt pour exec un script custom (bash -p)
+6. un joli onliner : `/opt/exportVIP < <(python -c 'from pwn import *; print "a"*296+p64(0x000000000040145b)+p64(0x4002d0)+p64(0x40133d)';cat)`
 
+> 6f424a5e3b001ee6a832581680169e2f687d8d6e493bdb4b26d518798f7b3c30
+
+## Step 13
+
+More detail: [Step13](./step13.md)
+
+1. trouver la machine qui manque avec arp
+2. setup un proxychains
+3. nmap la target, voir le nfs
+4. monter le nfs distant 
+5. recup les fichier du share
+6. exiftool pour trouver `Grandma Josephine`
+
+> b8a3ef108d0c3fac75f3f99f4d6465db8b85b29f41edcfb419a986ca861239f9
 
 ## Resources
 

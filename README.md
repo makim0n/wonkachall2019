@@ -133,6 +133,23 @@ More detail: [Step10](./step10.md)
 
 > d9c47d61bc453be0f870e0a840041ba054c6b7f725812ca017d7e1abd36b9865
 
+## Step 11
+
+More detail: [Step11](./step11.md)
+
+1. enumerer avec linenum
+2. trouver les fichiers world readable dans le home
+3. voir la clé privé de georgina
+4. se connecer avec cette clé
+
+> 5a4fec24bf04c854beee7e2d8678f84814a57243cbea3a7807cd0d5c973ab2d5
+
+## Step 12
+
+More detail: [Step12](./step12.md)
+
+
+
 ## Resources
 
 1. GitTools : https://github.com/internetwache/GitTools.git

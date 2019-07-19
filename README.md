@@ -121,6 +121,18 @@ More detail: [Step9](./step9.md)
 
 > 83907d64b336c599b35132458f7697c4eb0de26635b9616ddafb8c53d5486ac2
 
+## Step 10
+
+More detail: [Step10](./step10.md)
+
+1. trouver l'autre machine via arp
+2. trouver la configuration du serveru nginx
+3. récupérer une clé privé ssh
+4. se connecter à l'autre serveur en tant que violet
+5. attérir dans un lshell et escape
+
+> d9c47d61bc453be0f870e0a840041ba054c6b7f725812ca017d7e1abd36b9865
+
 ## Resources
 
 1. GitTools : https://github.com/internetwache/GitTools.git
@@ -143,6 +155,7 @@ More detail: [Step9](./step9.md)
 18. Récup le ntds : https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md
 19. où sont cachés les creds winscp : https://superuser.com/questions/100503/where-does-winscp-store-sites-password
 20. outil pour décoder le password : https://github.com/anoopengineer/winscppasswd/releases
+21. lshell security issue : https://github.com/ghantoos/lshell/issues/151
 
 ---
 
